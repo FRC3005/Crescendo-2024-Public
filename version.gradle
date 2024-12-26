@@ -1,0 +1,80 @@
+tasks.register("writeVersion") {
+    // Define an output stream to write to instead of terminal
+    def stdout = new ByteArrayOutputStream()
+
+    try {
+        // Get a noun based on hash of .jar to get the same noun each time
+        def nounFile = new File("nouns.txt")
+        int numNouns = nounFile.readLines().toArray().length
+        def frcArtifactFile = new File(configurations.archives.allArtifacts.getFiles().getAsPath())
+        def hash = new BigInteger(frcArtifactFile.withInputStream {
+            new java.security.DigestInputStream(it, java.security.MessageDigest.getInstance('MD5')).withStream {
+                it.eachByte {}
+                it.messageDigest.digest()
+            }
+        })
+
+        def noun = nounFile.readLines().get(hash.mod(numNouns))
+
+        exec {
+            commandLine "git", "rev-parse", "--abbrev-ref", "HEAD"
+            // Write to the output stream instead of terminal
+            standardOutput = stdout
+        }
+
+        // Parse the output into a string
+        def branch = stdout.toString().trim()
+        stdout.reset()
+
+        exec {
+            commandLine "git", "rev-parse", "--short", "HEAD"
+            standardOutput = stdout
+        }
+
+        def commitHash = stdout.toString().trim() + "-" + System.getProperty("user.name") + "-" + branch
+        stdout.reset()
+
+        commitHash += "-" + new Date().format('yyyyMMddHHmmss').toString()
+        exec {
+            commandLine "git", "diff"
+            standardOutput = stdout
+        }
+
+        def git_diff = stdout.toString().trim()
+        stdout.reset()
+
+        exec {
+            commandLine "git", "status", "--short"
+            standardOutput = stdout
+        }
+
+        if (!git_diff.isEmpty()) {
+            git_diff = stdout.toString() + "-----------------\r\n" + git_diff + "\r\n"
+            commitHash += "-d"
+        }
+
+        commitHash += "-" + noun + "\r\n"
+
+        new File(
+                projectDir.toString() + "/src/main/deploy",
+                "commit.txt"
+                ).text = git_diff
+
+        new File(
+                projectDir.toString() + "/src/main/deploy",
+                "version.txt"
+                ).text = commitHash
+    } catch (Exception e) {
+        println("Failed to generate version.txt due to: " + e.toString())
+        new File(
+                projectDir.toString() + "/src/main/deploy",
+                "version.txt"
+                ).text = e.toString()
+    }
+}
+
+//deploy.targets.roborio.artifacts.frcStaticFileDeploy.dependsOn(writeVersion)
+project.compileJava.dependsOn(writeVersion)
+compileJava {
+    options.encoding = "UTF-8"
+}

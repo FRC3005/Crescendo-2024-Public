@@ -1,0 +1,112 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.3749894166466297,
+        "y": 5.558660006212288
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.3388648999520236,
+        "y": 4.334942003217339
+      },
+      "isLocked": false,
+      "linkedName": "CenterRaceEndOne"
+    },
+    {
+      "anchor": {
+        "x": 2.634831936330541,
+        "y": 4.07755482177631
+      },
+      "prevControl": {
+        "x": 1.6348319363305408,
+        "y": 4.07755482177631
+      },
+      "nextControl": {
+        "x": 3.634831936330541,
+        "y": 4.07755482177631
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.6775322439533784,
+        "y": 6.678520023706715
+      },
+      "prevControl": {
+        "x": 1.2602956291995127,
+        "y": 6.057103788966914
+      },
+      "nextControl": {
+        "x": 1.889763779527561,
+        "y": 6.994609544774646
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.860610165664777,
+        "y": 6.990093980187961
+      },
+      "prevControl": {
+        "x": 2.1652132193153286,
+        "y": 7.003640673948014
+      },
+      "nextControl": {
+        "x": 3.556007112014225,
+        "y": 6.976547286427908
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.90125024694494,
+        "y": 5.545113312448848
+      },
+      "prevControl": {
+        "x": 3.0276860553721123,
+        "y": 5.9515141252504735
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [
+    {
+      "name": "ShootAndMove",
+      "minWaypointRelativePos": 1.4,
+      "maxWaypointRelativePos": 1.75,
+      "constraints": {
+        "maxVelocity": 1.0,
+        "maxAcceleration": 4.0,
+        "maxAngularVelocity": 800.0,
+        "maxAngularAcceleration": 800.0
+      }
+    }
+  ],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 0.0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": 0,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

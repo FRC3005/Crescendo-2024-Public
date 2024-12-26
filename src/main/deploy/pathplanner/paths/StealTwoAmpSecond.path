@@ -1,0 +1,119 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 5.127423588180511,
+        "y": 6.479835181892587
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 5.1436213769388255,
+        "y": 7.047363657366307
+      },
+      "isLocked": false,
+      "linkedName": "StealTwoAmpEnd"
+    },
+    {
+      "anchor": {
+        "x": 6.61497910097377,
+        "y": 6.986057085531518
+      },
+      "prevControl": {
+        "x": 5.797661910783834,
+        "y": 6.995088214704887
+      },
+      "nextControl": {
+        "x": 7.4775056640322894,
+        "y": 6.9765264052767275
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.577492278779962,
+        "y": 6.986057085531518
+      },
+      "prevControl": {
+        "x": 7.562717915897903,
+        "y": 6.99734599699823
+      },
+      "nextControl": {
+        "x": 7.592266641662021,
+        "y": 6.974768174064805
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.127423588180511,
+        "y": 6.479835181892587
+      },
+      "prevControl": {
+        "x": 6.613044337196169,
+        "y": 7.021702932295504
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "StealTwoAmpEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.5,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 1.85,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "starttrackingintake",
+      "waypointRelativePos": 0.05,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOffsetOnTheMove"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 11.193022738859584,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": 9.197794508144865,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

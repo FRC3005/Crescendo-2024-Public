@@ -1,0 +1,187 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.803183129208898,
+        "y": 6.584919221302506
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 5.803183129208898,
+        "y": 6.584919221302506
+      },
+      "isLocked": false,
+      "linkedName": "FtWorthSecondTop"
+    },
+    {
+      "anchor": {
+        "x": 8.234132023819605,
+        "y": 4.411706601190981
+      },
+      "prevControl": {
+        "x": 7.854824598538087,
+        "y": 6.132136708717863
+      },
+      "nextControl": {
+        "x": 8.613439449101122,
+        "y": 2.691276493664099
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.057234781136231,
+        "y": 5.129681370473852
+      },
+      "prevControl": {
+        "x": 4.702104607184865,
+        "y": 3.853376506419262
+      },
+      "nextControl": {
+        "x": 3.8404876809753636,
+        "y": 5.5586600062089015
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.7,
+        "y": 5.535994035608302
+      },
+      "prevControl": {
+        "x": 3.187680975361951,
+        "y": 5.5676029877150945
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.95,
+      "rotationDegrees": -83.82901752387853,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 1.5,
+      "rotationDegrees": -7.401226621516257,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 2.0,
+      "rotationDegrees": -2.770215797200187,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [
+    {
+      "name": "New Constraints Zone",
+      "minWaypointRelativePos": 2.15,
+      "maxWaypointRelativePos": 3.0,
+      "constraints": {
+        "maxVelocity": 1.25,
+        "maxAcceleration": 4.0,
+        "maxAngularVelocity": 800.0,
+        "maxAngularAcceleration": 800.0
+      }
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "intake",
+      "waypointRelativePos": 0.85,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "armUnderStage"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "track",
+      "waypointRelativePos": 1.75,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "notunderstage",
+      "waypointRelativePos": 1.9,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "armNotUnderStage"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "feedthroughtoshoot",
+      "waypointRelativePos": 2.0999999999999996,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intakeFeedthrough"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -0.5025816667212101,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "FtWorth",
+  "previewStartingState": {
+    "rotation": 15.494848599138571,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

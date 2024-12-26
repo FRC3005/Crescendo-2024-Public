@@ -1,0 +1,85 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 5.217370019617726,
+        "y": 0.5625911457736756
+      },
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    },
+    {
+      "anchor": {
+        "x": 8.301865492619875,
+        "y": 0.7902238026698281
+      },
+      "prevControl": {
+        "x": 7.2644586015373385,
+        "y": 0.7902238026698281
+      },
+      "nextControl": {
+        "x": 8.88888888888889,
+        "y": 0.7902238026698281
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": {
+        "x": 4.7522668671892,
+        "y": 0.37745299771960217
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.8,
+      "rotationDegrees": -0.4786713148837018,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "intake",
+      "waypointRelativePos": 0.35,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": []
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -35.719954312290334,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": -34.330217195503316,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

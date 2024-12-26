@@ -1,0 +1,31 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.4527649879455566,
+      "y": 5.5582804679870605
+    },
+    "rotation": 3.0944552650835086e-28
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceCenterOne.1"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceCenterTwo.1"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": true
+}

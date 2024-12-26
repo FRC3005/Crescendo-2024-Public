@@ -1,0 +1,130 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 3.5038566095675625,
+        "y": 0.49507735558495236
+      },
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    },
+    {
+      "anchor": {
+        "x": 6.222617041231117,
+        "y": 0.8124853017682312
+      },
+      "prevControl": {
+        "x": 5.174515495674796,
+        "y": 0.8357764472250384
+      },
+      "nextControl": {
+        "x": 7.0502557610007734,
+        "y": 0.7940933302177943
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.995782725442397,
+        "y": 1.2293699902447988
+      },
+      "prevControl": {
+        "x": 6.7314615874598696,
+        "y": 1.2416313046117573
+      },
+      "nextControl": {
+        "x": 5.285991664723193,
+        "y": 1.2175401392328113
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": {
+        "x": 3.229876520821203,
+        "y": 1.7424316440724383
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.65,
+      "rotationDegrees": 0.0,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 1.0,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "intake",
+      "waypointRelativePos": 0.5499999999999999,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "startTracking",
+      "waypointRelativePos": 2.1999999999999997,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -45.567266409308445,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": -47.009553812543636,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

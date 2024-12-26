@@ -1,0 +1,203 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.478395845680956,
+        "y": 6.498753689496106
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 3.9488612310525895,
+        "y": 5.775407106369911
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.319927750963407,
+        "y": 7.531961730590271
+      },
+      "prevControl": {
+        "x": 7.4192119197776645,
+        "y": 7.412999262320455
+      },
+      "nextControl": {
+        "x": 8.79857759715199,
+        "y": 7.595179634803857
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.709372934273819,
+        "y": 6.672329653443691
+      },
+      "prevControl": {
+        "x": 8.581830496991122,
+        "y": 7.012671803121527
+      },
+      "nextControl": {
+        "x": 7.234294650427135,
+        "y": 6.487003545562809
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.292109148548377,
+        "y": 5.60155185971419
+      },
+      "prevControl": {
+        "x": 7.951266159849433,
+        "y": 6.008733981384107
+      },
+      "nextControl": {
+        "x": 8.548882329077058,
+        "y": 5.294802265613108
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 5.127423588180511,
+        "y": 6.479835181892587
+      },
+      "prevControl": {
+        "x": 6.784635791493807,
+        "y": 6.434679536025739
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "StealTwoAmpEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 1.6500000000000001,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 2.9499999999999997,
+      "rotationDegrees": -42.5633517531899,
+      "rotateFast": true
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "intakeFast",
+      "waypointRelativePos": 0.75,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intakeFeedthrough"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "launcherPlop"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "intake",
+      "waypointRelativePos": 2.05,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "armLow",
+      "waypointRelativePos": 0.1,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "armLow"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "startTracking",
+      "waypointRelativePos": 3.55,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOffsetOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "outtake",
+      "waypointRelativePos": 0.25,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "outtake"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 14.765423109928504,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": 0,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

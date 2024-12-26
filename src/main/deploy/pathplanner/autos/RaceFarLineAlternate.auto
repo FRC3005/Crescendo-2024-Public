@@ -1,0 +1,61 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.495948049571343,
+      "y": 1.4641247383648277
+    },
+    "rotation": 0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceFarFirstAlternate"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "runFeeder"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceFarSecondAlternate"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "runFeeder"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceFarThird"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "runFeeder"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceFarLast"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

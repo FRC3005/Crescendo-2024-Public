@@ -1,0 +1,216 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.488663846892911,
+        "y": 6.504792991839755
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 2.180663101343949,
+        "y": 6.730603274871147
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.9090833691871465,
+        "y": 6.985550368616265
+      },
+      "prevControl": {
+        "x": 2.4122418969997197,
+        "y": 6.795189651303075
+      },
+      "nextControl": {
+        "x": 4.810260268257892,
+        "y": 7.713970636459463
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.284824945869945,
+        "y": 5.7
+      },
+      "prevControl": {
+        "x": 8.196771436429593,
+        "y": 5.713546693760054
+      },
+      "nextControl": {
+        "x": 8.372878455310296,
+        "y": 5.6864533062399465
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.803183129208898,
+        "y": 6.725789045486721
+      },
+      "prevControl": {
+        "x": 6.133470519463528,
+        "y": 7.02081245864803
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "FtWorthFirstTop"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.95,
+      "rotationDegrees": 28.0,
+      "rotateFast": true
+    },
+    {
+      "waypointRelativePos": 1.7999999999999998,
+      "rotationDegrees": -20.0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [
+    {
+      "name": "New Constraints Zone",
+      "minWaypointRelativePos": 0.0,
+      "maxWaypointRelativePos": 1.0999999999999999,
+      "constraints": {
+        "maxVelocity": 1.25,
+        "maxAcceleration": 1.5,
+        "maxAngularVelocity": 600.0,
+        "maxAngularAcceleration": 600.0
+      }
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "Start Tracking",
+      "waypointRelativePos": 0.0,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOffsetOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Run feeder to shoot both",
+      "waypointRelativePos": 0.44999999999999996,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intakeFeedthrough"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "stop intake",
+      "waypointRelativePos": 1.1500000000000001,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "stopIntake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "launcherIdle"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "start tracking",
+      "waypointRelativePos": 1.85,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOffset"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "intake",
+      "waypointRelativePos": 1.6500000000000001,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "shoot",
+      "waypointRelativePos": 2.95,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "runFeeder"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 15.802513953935497,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "FtWorth",
+  "previewStartingState": {
+    "rotation": 0,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

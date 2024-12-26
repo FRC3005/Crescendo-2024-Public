@@ -1,0 +1,79 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 0.7518415036830088,
+        "y": 4.452346682471143
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.255919622950358,
+        "y": 2.3255157621426363
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.225100894646236,
+        "y": 0.821832754776621
+      },
+      "prevControl": {
+        "x": 6.60943776140071,
+        "y": 1.5338198982407487
+      },
+      "nextControl": {
+        "x": 9.024355826489431,
+        "y": 0.4696187170152136
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": {
+        "x": 4.092994437533229,
+        "y": 1.00511647526878
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.15,
+      "rotationDegrees": -48.34758484092106,
+      "rotateFast": false
+    },
+    {
+      "waypointRelativePos": 1.0,
+      "rotationDegrees": -18.257563075389697,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -32.957424857115036,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": null,
+  "previewStartingState": {
+    "rotation": -59.28818918916899,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

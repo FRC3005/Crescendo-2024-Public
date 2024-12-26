@@ -1,0 +1,144 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.5,
+        "y": 1.46
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 6.212879132945489,
+        "y": 0.8845479884038729
+      },
+      "isLocked": false,
+      "linkedName": "FarStart"
+    },
+    {
+      "anchor": {
+        "x": 8.243163152992974,
+        "y": 2.429373747636384
+      },
+      "prevControl": {
+        "x": 7.92747697161567,
+        "y": 2.102413059781319
+      },
+      "nextControl": {
+        "x": 8.622470578274491,
+        "y": 2.8222278666779563
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": {
+        "x": 4.693564527562299,
+        "y": 0.12006581627857227
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 1.15,
+      "rotationDegrees": 54.59488832363958,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [
+    {
+      "name": "AllOut",
+      "minWaypointRelativePos": 0,
+      "maxWaypointRelativePos": 1.75,
+      "constraints": {
+        "maxVelocity": 5.5,
+        "maxAcceleration": 4.0,
+        "maxAngularVelocity": 2000.0,
+        "maxAngularAcceleration": 2000.0
+      }
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "intake",
+      "waypointRelativePos": 0.55,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "outtake",
+      "waypointRelativePos": 0.1,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "armLow"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "outtake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "startTracking",
+      "waypointRelativePos": 1.9,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -37.10030838573477,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": 0,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

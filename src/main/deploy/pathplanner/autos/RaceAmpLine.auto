@@ -1,0 +1,55 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.478395845680956,
+      "y": 6.498753689496106
+    },
+    "rotation": 0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "StealTwoAmp"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "runFeeder"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "StealTwoAmpSecond"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "runFeeder"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "StealAmpThird"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "runFeeder"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

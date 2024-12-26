@@ -1,0 +1,114 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 2.3725643300063473,
+        "y": 2.6578131139953904
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.98508113254026,
+        "y": 2.3455132624550967
+      },
+      "isLocked": false,
+      "linkedName": "StealTwoFarEnd"
+    },
+    {
+      "anchor": {
+        "x": 4.023566378987239,
+        "y": 1.3912827115805075
+      },
+      "prevControl": {
+        "x": 4.8103074291889625,
+        "y": 1.3879328297317364
+      },
+      "nextControl": {
+        "x": 1.8528739808145094,
+        "y": 1.4005253500090475
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.9038633995635335,
+        "y": 2.964670490121815
+      },
+      "prevControl": {
+        "x": 2.1251260643110843,
+        "y": 2.0976820894783477
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "RaceFarThirdEnd"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.5,
+      "rotationDegrees": 0.0,
+      "rotateFast": true
+    },
+    {
+      "waypointRelativePos": 1.3,
+      "rotationDegrees": 0,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "intake",
+      "waypointRelativePos": 0.35,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "track",
+      "waypointRelativePos": 1.3,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": -52.0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": -46.12820944392423,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

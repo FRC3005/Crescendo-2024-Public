@@ -1,0 +1,55 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.5,
+      "y": 1.46
+    },
+    "rotation": 0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceBloopFarFirst"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "targetAndShoot"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceBloopFarSecond"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "targetAndShoot"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "RaceFarThird"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "targetAndShoot"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}

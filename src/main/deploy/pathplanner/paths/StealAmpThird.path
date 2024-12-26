@@ -1,0 +1,76 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 5.127423588180511,
+        "y": 6.479835181892587
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.739085033725624,
+        "y": 6.439195100612424
+      },
+      "isLocked": false,
+      "linkedName": "StealTwoAmpEnd"
+    },
+    {
+      "anchor": {
+        "x": 3.746766677206824,
+        "y": 6.5412140052319145
+      },
+      "prevControl": {
+        "x": 4.781123457544164,
+        "y": 6.74517168022801
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "Intake",
+      "waypointRelativePos": 0.05,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOnTheMove"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 17.175903615746726,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": 15.255118703057658,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

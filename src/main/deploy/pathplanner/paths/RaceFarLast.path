@@ -1,0 +1,52 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.9038633995635335,
+        "y": 2.964670490121815
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.055465713793683,
+        "y": 1.762281878767694
+      },
+      "isLocked": false,
+      "linkedName": "RaceFarThirdEnd"
+    },
+    {
+      "anchor": {
+        "x": 8.62271291626662,
+        "y": 2.4084519009825143
+      },
+      "prevControl": {
+        "x": 5.803061910238309,
+        "y": 1.2629686797835142
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "eventMarkers": [],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Race",
+  "previewStartingState": {
+    "rotation": -49.238619678945625,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

@@ -1,0 +1,115 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.803183129208898,
+        "y": 6.725789045486721
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 6.257194926121381,
+        "y": 6.269717022231563
+      },
+      "isLocked": false,
+      "linkedName": "FtWorthFirstTop"
+    },
+    {
+      "anchor": {
+        "x": 8.04,
+        "y": 5.84
+      },
+      "prevControl": {
+        "x": 6.712081616033663,
+        "y": 6.299422000140012
+      },
+      "nextControl": {
+        "x": 8.992784127790479,
+        "y": 5.510363785172014
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 4.803183129208898,
+        "y": 6.584919221302506
+      },
+      "prevControl": {
+        "x": 6.631986786816219,
+        "y": 6.255283006474522
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "FtWorthSecondTop"
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 0.85,
+      "rotationDegrees": -17.1254356775932,
+      "rotateFast": false
+    }
+  ],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "intakeandtrack",
+      "waypointRelativePos": 0.8,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "intake"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "startTrackingArmLauncherOffset"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "shoot",
+      "waypointRelativePos": 1.95,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "runFeeder"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.3,
+    "maxAcceleration": 3.6,
+    "maxAngularVelocity": 1000.0,
+    "maxAngularAcceleration": 1000.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 11.704464888306326,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "FtWorth",
+  "previewStartingState": {
+    "rotation": 17.72762945437781,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

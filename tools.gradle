@@ -1,0 +1,54 @@
+import org.gradle.internal.os.OperatingSystem
+import org.gradle.nativeplatform.platform.Architecture
+
+task installTools {
+    doLast {
+        String os = "Linux"
+        if (OperatingSystem.current().isWindows()) {
+            os = "Windows"
+        } else if (OperatingSystem.current().isMacOsX()) {
+            os = "macOS"
+        }
+
+        println "Architecture: " + Architecture.getName()
+
+        def pathplanner = [
+            name: 'PathPlanner',
+            output: 'pathplanner-v2023.4.2.zip',
+            url: "https://github.com/mjansen4857/pathplanner/releases/download/v2023.4.2/PathPlanner-Windows.zip"
+        ]
+        def advantagescope = [
+            name: 'AdvantageScope',
+            output: 'advantagescope_v2.3.0.exe',
+            url: "https://github.com/Mechanical-Advantage/AdvantageScope/releases/download/v2.3.0/advantagescope-win-x64-v2.3.0.exe"
+        ]
+
+        println "Installing PathPlanner to .tools"
+
+        download.run {
+            src pathplanner['url']
+            dest new File(buildDir, pathplanner['output'])
+            overwrite false
+        }
+
+        copy {
+            from zipTree(buildDir.toString() + '/' + pathplanner['output'])
+            into ".tools/" + pathplanner['name']
+        }
+
+        println "Installing advantagescope to .tools"
+
+        download.run {
+            src advantagescope['url']
+            dest new File(buildDir, advantagescope['output'])
+            overwrite false
+        }
+
+        copy {
+            from buildDir.toString() + '/' + advantagescope['output']
+            into ".tools/" + advantagescope['name']
+        }
+    }
+}
+
+installTools.dependsOn project.tasks.findByPath(':InstallAllTools')
